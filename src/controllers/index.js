@@ -66,7 +66,7 @@ const log = async (req, res) => {
             },
           },
           { $unset: ["_id", "user_id", "__v"] },
-          { $limit: limit*1 },
+          { $limit: parseInt(limit) },
         ],
         as: "log",
       },
